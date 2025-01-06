@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            <input type="radio" name="contactMethod" value="email" onclick="toggleInput('email')" />
+            Email
+        </label>
+        <label>
+            <input type="radio" name="contactMethod" value="phone" onclick="toggleInput('phone')" />
+            Phone Number
+        </label>
+
+        <div id="emailInput" style="display: none;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+        </div>
+
+        <div id="phoneInput" style="display: none;">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+        </div>
+    </form>
+    <script>
+        function toggleInput(selected) {
+            const emailDiv = document.getElementById("emailInput");
+            const phoneDiv = document.getElementById("phoneInput");
+
+            if (selected === "email") {
+                emailDiv.style.display = "block";
+                phoneDiv.style.display = "none";
+            } else if (selected === "phone") {
+                phoneDiv.style.display = "block";
+                emailDiv.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="coffee.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div  class="home_img">
+            <img src="/Web Design practice/Coffe Website/contents/home_img.avif" alt="home_img">
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <div>
+                    <a href="#" class="nav_a"><li class="svg_style">Get Mobile App</li></a>
+                </div>
+                <div class="list_style">
+                    <a href="#" class="nav_a"><li>Investor Relations</li></a>
+                    <a href="#" class="nav_a"><li>Add Restaurant</li></a>
+                    <a href="#" class="nav_a"><li>Log in</li></a>
+                    <a href="#" class="nav_a"><li>Sign up</li></a>
+                </div>
+            </ul>
+        </nav>
+        <div class="zomato_logo">
+            <img src="/Web Design practice/Coffe Website/contents/zomato.avif" alt="zomato_logo" class="logo">
+        </div>
+
+        <div>
+            <h1  class="home_h1">
+                Discover the best food & drinks in Chandauli 
+            </h1>
+        </div>
+
+        <div class="search_container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="location_icon"><title>location-fill</title><path d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"></path></svg>
+            <select name="location" id="location" class="location">
+                <option value="1">Chandauli</option>
+                <option value="1">Deen Dayal Upadhyay Nagar</option>
+                <option value="1">Varanasi</option>
+            </select>
+            <span class="divider">|</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#828282" width="18" height="18" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class=" search_icon"><title>Search</title><path d="M19.78 19.12l-3.88-3.9c1.28-1.6 2.080-3.6 2.080-5.8 0-5-3.98-9-8.98-9s-9 4-9 9c0 5 4 9 9 9 2.2 0 4.2-0.8 5.8-2.1l3.88 3.9c0.1 0.1 0.3 0.2 0.5 0.2s0.4-0.1 0.5-0.2c0.4-0.3 0.4-0.8 0.1-1.1zM1.5 9.42c0-4.1 3.4-7.5 7.5-7.5s7.48 3.4 7.48 7.5-3.38 7.5-7.48 7.5c-4.1 0-7.5-3.4-7.5-7.5z"></path></svg>
+            <input type="search" name="search" id="search" class="search" placeholder="Search for restaurant, cuisine or dish ">
+        </div>
+    </header>
+    <main>
+        <div class="box_container">
+            <div class="box_img">
+                <img src="/Web Design practice/Coffe Website/contents/img_1home.avif" alt="home_img1" class="home_img1">
+            </div>
+            <div class="order-online">
+                <h2>Order Online</h2>
+                <h3>Stay home and order to your doorstep</h3>
+            </div>
+        </div>
+        <div class="popularh1">
+            <h1>Popular localities in and around Chandauli</h1>
+        </div>
+        <div class="box_localities">
+            <div>
+                <div class="place_local"><h2>Chandauli Locality</h2></div>
+                <div class="no_of_places"><h3>24 places</h3></div>
+            </div>
+            <div><i class="fa-solid fa-chevron-right"
+                class="chevron1"></i></div>
+        </div>
+        <div class="mobile_block">
+            <div class="mobile_img">
+                <img src="/Web Design practice/Coffe Website/contents/mobile.avif" alt="mobile_img" class="mobile">
+            </div>
+            <div class="getAppForm">
+                <div>
+                    <h1>Get the Zomato app</h1>
+                    <p style="display: flex;">We will send you a link, open it on your phone to download <span>the app</span></p>
+                </div>
+                <div class="input_select">
+                    <div>
+                        <input type="radio" name="contactMethod" checked value="email" onclick="toggleInput('email')" class="email_radio" id="email_radio" >
+                        <label for="email_radio">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="contactMethod"  value="phone" onclick="toggleInput('phone')" class="phone_radio" id="phone_radio">
+                        <label for="phone_radio">Phone</label>
+                    </div>
+                </div>
+                <div class="input_style">
+                    <div id="emailInput" style="display: block;" class="emailInput">
+                        <input type="email" id="email" name="email" placeholder="Email" class="email"/>
+                    </div>
+
+                    <div id="phoneInput" class="phone_box">
+                        <div>
+                            <select name="country_code" id="country_code" class="country_code">
+                                <option value="1">+91</option>
+                                <option value="2">+92</option>
+                                <option value="3">+93</option>
+                                <option value="4">+94</option>
+                                <option value="5">+95</option>
+                                <option value="6">+96</option>
+                                <option value="7">+97</option>
+                            </select>
+                            <div class="divider_phone"><p>|</p></div>
+                        </div>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="phone" />
+                    </div>
+                    <div class="share">
+                        <button>Share App Link</button>
+                    </div>
+                </div>
+                <div class="download_app">
+                    <p>Download app from</p>
+                </div>
+                <div class="app_stores">
+                    <div class="Google_play">
+                        <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="google_play" style="width: 140px;">
+                    </div>
+                    <div>
+                        <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="google_play" style="width: 140px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore">
+            <h1>
+                Explore options near me
+            </h1>
+        </div>
+        <script src="coffee.js"></script>
+    </main>
+</body>
+</html>

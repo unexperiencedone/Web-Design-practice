@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-family: "Inter", sans-serif ;
+    overflow: hidden;
+}
+body{
+    background-image: url(bac\ 4.png);
+    background-size:cover ;
+    background-position:top;
+    background-repeat: no-repeat;
+    animation: bacAnimation 1.2s ease-in-out forwards;   
+}
+@keyframes bacAnimation{
+    from{
+        transition: translateY(-400px);
+    }
+    to{
+        transition: translateY(0px);
+    }
+}
+body::after{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(transparent 50%, rgba(9, 5, 5, 0.842));
+}
+.content img {
+    position:absolute;
+    bottom:0px;
+    top: -100px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+header{
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    align-items:center;
+    /* border:2px solid black; */
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 0px 0px 25px 25px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    height:40px;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.516);
+    font-size: 18px;
+    font-weight: 450;
+    transition: all 0.3s ;
+    box-sizing: border-box;
+    padding: 13px;
+    height: 50px;
+    text-align: center;
+    width: 100px;
+    border-radius: 0px 0px 25px 25px;
+    transition: all 0.3s;  
+}
+/* .sahara{
+    background-color: rgba(10, 46, 10, 0.865);
+    color:white;
+    
+} */
+.nav_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 8px rgba(0, 0, 0, 0.316);
+    border-radius: 0px 0px 25px 25px;
+}
+nav a:hover{
+    background-color: rgba(10, 46, 10, 0.865);
+    color: white;
+}
+nav:hover > a:not(:hover){
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.516);
+}
+.title{
+    position: absolute;
+    top:43%;
+    right: 45%;
+    color: rgba(255, 255, 255, 0.925);
+    transform:translate(50%,-50%)    
+}
+.title h3{
+    font-size:1.7rem ;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.title h1{
+    font-size:12rem ;
+    font-weight: 800;
+    letter-spacing: 35px;
+    margin: -20px 0;
+}
+p{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    color:rgba(255, 255, 255, 0.708);
+    position:absolute;
+    bottom: 15%;
+    width:60%;
+    justify-self: center;
+    text-align: center;
+    text-shadow: 0 14px 8px rgba(0, 0, 0, 0.883);
+    
+}
+.info-wrap{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    /* bottom: 20%; */
+
+}
+.cta{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+/* note for justify content to take effect on a inline element you have to provide width */
+.cta button{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.708);
+    background-color: transparent;
+    border: 1px solid white;
+    height: 50px;
+    width: 300px;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+    transition: all 0.3s ease-out;
+}
+.cta button:hover{
+    background-color: rgba(255, 255, 255, 0.708);
+    color: rgba(0, 0, 0, 0.302);
+}
+.slider{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.slider i{
+    padding: 0 5%;
+    font-size: 36px;
+    background-color:rgba(240, 248, 255, 0);
+    color: rgba(255, 255, 255, 0.434);
+    cursor: pointer;
+}
+
+ @keyframes textAnimation{
+    from{ transform: translateY(100px);
+          opacity:0;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+    }
+    to {transform: translateY(0px);
+        opacity: 1;
+        text-align: center;
+        justify-content: center;
+        align-items: center}
+ }
+
+.text-animation{
+    animation: textAnimation 1.5s ease-in-out forwards ;
+}
+
+.img-animation{
+    animation: textAnimation 1.2s ease-in-out forwards;
+}
+
+@keyframes navAnimation{
+    from{ transition: translateY(-200px);
+          opacity:0;  
+    }
+    to{
+        transition: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.nav-animation{
+    animation: navAnimation 1.5s ease-in-out backwards;
+}
+
+.but-animation{
+ animation: textAnimation 1.8s ease-in-out forwards;
+}
+
+@keyframes leftAnimation {
+    from{
+        transition: translateX(-200px);
+        opacity: 0;
+        scale: 0.5;
+    }
+    
+    to{
+        transition: translateX(0px);
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes rightAnimation {
+    from{
+        transition: translateX(200px);
+        opacity: 0;
+        scale: 0.5;
+    }
+    
+    to{
+        transition: translateX(0px);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.left-animation{
+    animation: leftAnimation 1.8s ease-in-out forwards ,textAnimation 1.8s ease-in-out forwards;
+}
+.right-animation{
+    animation: rightAnimation 1.8s ease-in-out forwards , textAnimation 1.8s ease-in-out forwards;
+}
+@keyframes liAnimations {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.li-animation{
+    animation: leftliAnimation 2s ease-in-out ;
+}
+
+@keyframes endList {
+    from{
+        transition: translateY(-400px);
+        opacity:0;
+        scale: 0.5;
+    }
+    to{
+        transition: translateY(0px);
+        opacity:1;
+        scale:1;
+    }
+}
+
+.end-list{
+    animation: endList 1.8s ease-in-out;
+}
+@keyframes leftliAnimation {
+    from{
+        transition: translatex(-200px);
+        opacity: 0;
+    }
+    
+    to{
+        transition: translatex(0px);
+        opacity: 1;
+    }
+}
+header{
+    animation: navAnimation 1.5s ease-in-out forwards;
+}

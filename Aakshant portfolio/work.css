@@ -1,0 +1,122 @@
+.work-detail{
+    justify-content: center;
+    display: flex;
+}
+.work-detail p{
+    font-size: 25px;
+    color: white;
+    margin-top: 130px;
+    position: absolute;
+    width:  1000px;
+    line-height: 60px;
+    text-align: center;
+    animation: paraAnimation 5s cubic-bezier(1,-0.8, 0.06, 0) forwards;
+}
+.works{
+    justify-content: center;
+    display: flex;
+    gap:100px;
+}
+.workbox-1{
+    width:400px;
+    height:200px;
+    border: 2px solid red;
+    /* position: absolute; */
+    margin-top: 400px;
+    /* margin-left: -1000px; */
+    animation: workbox-1 4s ease-in-out forwards;
+}
+.workbox-1 img{
+    width:100%;
+    height: 100%;
+}
+.workbox-1:hover{
+    /* position: absolute; */
+    transform: scale(1.5);
+    border-radius: 10%;
+    animation: SomeFlex 0.5s ease-in-out forwards;
+    cursor: pointer ;
+}
+.workbox-2{
+    width:400px;
+    height:200px;
+    /* border: 2px solid blue; */
+    /* position: absolute; */
+    margin-top: 400px;
+    animation: workbox-2 4s ease-in-out forwards;
+}
+.workbox-2 img{
+    width: 400px;
+    height: 205px;
+}
+.workbox-3{
+    width:400px;
+    height:200px;
+    border: 2px solid yellow;
+    /* position: absolute; */
+    margin-top: 400px;
+    right: 40px;
+    animation: workbox-3 4s ease-in-out forwards;
+}
+
+@keyframes paraAnimation {
+    from{
+        opacity:0;
+        
+      }
+      to{
+        opacity: 1;
+        
+      }
+}
+
+@keyframes workbox-1 {
+    from{
+        opacity:0;
+        margin-top: 600px;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+        margin-top: 400px;
+    }
+}
+
+@keyframes SomeFlex{
+    from{
+        transform: scale(1);
+        border-radius: 0px;
+    }
+    to{
+        transform: scale(1.2);
+        border-radius: 10% ;
+    }
+}
+@keyframes workbox-2 {
+    from{
+        opacity:0;
+        scale: 0;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes workbox-3 {
+    from{
+        opacity:0;
+        margin-top: 200px;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+        margin-top: 400px;
+    }
+}

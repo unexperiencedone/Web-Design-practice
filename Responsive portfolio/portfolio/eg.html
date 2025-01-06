@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-items">
+                <div class="name">
+                    <li><span>Aa</span>kshant.</li>
+                </div>
+                <div class="nav-headings">
+                    <li><a href="#home" class="anima">Home</a></li>
+                    <li><a href="#about" class="anima">About</a></li>
+                    <li><a href="#services" class="anima">Services</a></li>
+                    <li><a href="#portfolio" class="anima">Portfolio</a></li>
+                    <li><a href="#contact" class="anima">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="home">
+        <div class="text">
+            <h2>Web Developer</h2>
+            <h1>Hi, I'm <span>Aakshant</span></h1>
+            <h1>Kumar from India</h1>
+        </div>
+    </div>
+
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/user.png" alt="developer-image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="title">About <span>Me</span></h1>
+                    <p class="about-content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum eum voluptatum labore. Molestias optio alias harum perspiciatis in quo ullam sint ad, molestiae ab earum nihil nobis dolore. Illum, quos dolorem.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-link active-link" data-tab="skill">Skills</p>
+                        <p class="tab-link" data-tab="experience">Experience</p>
+                        <p class="tab-link" data-tab="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><p><span>UI/UX</span> <br> Designing Web/App interfaces</p></li>
+                            <li><p><span>Web Development</span> <br> Web app Development</p></li>
+                            <li><p><span>App Development</span> <br> Building Android/iOS apps</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><p><span>UI/UX</span> <br> Designing Web/App interfaces</p></li>
+                            <li><p><span>Web Development</span> <br> Web app Development</p></li>
+                            <li><p><span>App Development</span> <br> Building Android/iOS apps</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><p><span>UI/UX</span> <br> Designing Web/App interfaces</p></li>
+                            <li><p><span>Web Development</span> <br> Web app Development</p></li>
+                            <li><p><span>App Development</span> <br> Building Android/iOS apps</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-contents");
+
+        tabLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                // Remove active classes
+                tabLinks.forEach(link => link.classList.remove("active-link"));
+                tabContents.forEach(content => content.classList.remove("active-tab"));
+
+                // Add active classes to clicked tab and corresponding content
+                link.classList.add("active-link");
+                const tabName = link.getAttribute("data-tab");
+                document.getElementById(tabName).classList.add("active-tab");
+            });
+        });
+    </script>
+</body>
+</html>

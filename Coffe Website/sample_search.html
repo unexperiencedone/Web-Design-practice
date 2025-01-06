@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Input with Radio Buttons</title>
+    <style>
+        /* Hide the input by default */
+        .hidden-input {
+            display: none;
+        }
+
+        /* Show the input when the radio is checked */
+        #showInput:checked ~ .hidden-input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Radio buttons for selecting show/hide -->
+    <label>
+        <input type="radio" name="toggle" id="showInput">
+        Show Input
+    </label>
+    <label>
+        <input type="radio" name="toggle" id="hideInput">
+        Hide Input
+    </label>
+
+    <!-- Input that appears/disappears -->
+    <input type="text" class="hidden-input" placeholder="Enter text here...">
+</body>
+</html>
+
